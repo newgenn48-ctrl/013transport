@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run build:*)",
+      "Bash(npm run dev:*)",
+      "Bash(ren:*)",
+      "Bash(move \"030Transport (1).webp\" \"030Transport-1.webp\")",
+      "Bash(move \"030Transport (2).webp\" \"030Transport-2.webp\")",
+      "Bash(npm install:*)",
+      "Bash(git remote add:*)",
+      "Bash(git add:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
