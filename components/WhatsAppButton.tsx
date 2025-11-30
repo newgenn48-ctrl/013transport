@@ -19,7 +19,7 @@ export default function WhatsAppButton() {
       href="https://wa.me/31686411124?text=Hallo%2C%20ik%20heb%20een%20vraag%20over%20013Transport."
       target="_blank"
       rel="noopener noreferrer"
-      className={`fixed bottom-6 right-6 z-50 flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white px-5 py-4 rounded-full shadow-2xl transition-all duration-300 hover:scale-110 ${
+      className={`fixed bottom-6 right-6 z-50 flex items-center gap-3 bg-green-700 hover:bg-green-800 text-white px-5 py-4 rounded-full shadow-2xl transition-all duration-300 hover:scale-110 ${
         isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
       }`}
       aria-label="Chat via WhatsApp"
