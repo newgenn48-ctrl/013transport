@@ -75,7 +75,7 @@ export default function Footer() {
 
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6">
-          <p className="text-white/70 text-sm text-center">
+          <p className="text-white text-sm text-center">
             &copy; {new Date().getFullYear()} 013Transport BV. Alle rechten voorbehouden.
           </p>
         </div>

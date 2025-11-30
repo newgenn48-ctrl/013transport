@@ -138,7 +138,7 @@ export default function Vacatures() {
               </p>
 
               <div className="bg-gray-50 rounded-xl p-5 mb-6">
-                <h4 className="font-semibold text-gray-900 mb-4">Verdiensten per stop (excl. BTW)</h4>
+                <p className="font-semibold text-gray-900 mb-4">Verdiensten per stop (excl. BTW)</p>
                 <div className="space-y-3">
                   <div className="flex justify-between items-center">
                     <span className="text-gray-600">Klantlevering</span>
@@ -197,7 +197,7 @@ export default function Vacatures() {
               </p>
 
               <div className="bg-gray-50 rounded-xl p-5 mb-6">
-                <h4 className="font-semibold text-gray-900 mb-4">Verdiensten per stop (excl. BTW)</h4>
+                <p className="font-semibold text-gray-900 mb-4">Verdiensten per stop (excl. BTW)</p>
                 <div className="space-y-3">
                   <div className="flex justify-between items-center">
                     <span className="text-gray-600">Amerikaanse koelkast full service</span>
@@ -260,7 +260,7 @@ export default function Vacatures() {
               </p>
 
               <div className="bg-gray-50 rounded-xl p-5 mb-6">
-                <h4 className="font-semibold text-gray-900 mb-4">Verdiensten (excl. BTW)</h4>
+                <p className="font-semibold text-gray-900 mb-4">Verdiensten (excl. BTW)</p>
                 <div className="space-y-3">
                   <div className="flex justify-between items-center">
                     <span className="text-gray-600">Uurloon</span>
@@ -328,7 +328,7 @@ export default function Vacatures() {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900">{item.title}</h4>
+                  <h3 className="font-semibold text-gray-900">{item.title}</h3>
                   <p className="text-sm text-gray-500">{item.desc}</p>
                 </div>
               </div>
