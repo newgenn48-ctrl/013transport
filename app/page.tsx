@@ -241,15 +241,15 @@ export default function Home() {
                 <div
                   key={i}
                   className="rounded-2xl p-6"
-                  style={{ backgroundColor: item.highlight ? '#f98b67' : 'rgba(255,255,255,0.1)' }}
+                  style={{ backgroundColor: item.highlight ? '#f98b67' : 'rgba(255,255,255,0.15)' }}
                 >
-                  <div className={`text-3xl sm:text-4xl font-bold ${item.highlight ? 'text-white' : ''}`} style={!item.highlight ? { color: '#f98b67' } : {}}>
+                  <div className="text-3xl sm:text-4xl font-bold text-white">
                     {item.value}
                   </div>
-                  <div className={`font-semibold mt-1 ${item.highlight ? 'text-white' : 'text-white'}`}>
+                  <div className="font-semibold mt-1 text-white">
                     {item.label}
                   </div>
-                  <div className={`text-sm ${item.highlight ? 'text-white/80' : 'text-white/60'}`}>
+                  <div className="text-sm text-white">
                     {item.desc}
                   </div>
                 </div>
@@ -388,7 +388,7 @@ export default function Home() {
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             Klaar om partner te worden?
           </h2>
-          <p className="text-xl text-white/90 mb-8">
+          <p className="text-xl text-white mb-8">
             Neem contact op via WhatsApp. We plannen een kennismaking bij het depot.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
