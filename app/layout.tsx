@@ -22,18 +22,27 @@ export const metadata: Metadata = {
   keywords: ["witgoedtransport", "ZZP chauffeur", "transport vacature", "013Transport", "bezorgpartner", "witgoed bezorging"],
   authors: [{ name: "013Transport BV" }],
   creator: "013Transport BV",
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/logo.svg", type: "image/svg+xml", sizes: "512x512" },
+    ],
+    apple: "/logo.svg",
+    shortcut: "/icon.svg",
+  },
   openGraph: {
     type: "website",
     locale: "nl_NL",
     siteName: "013Transport",
     title: "013Transport | Professioneel Witgoedtransport",
     description: "Word ZZP-partner bij 013Transport. Wekelijkse opdrachten, eerlijke betaling en tot 10% bonus.",
-    images: [{ url: "/030Transport-2.webp", width: 1200, height: 630, alt: "013Transport Vloot" }],
+    images: [{ url: "/013Transport.webp", width: 1200, height: 630, alt: "013Transport Logo" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "013Transport | Professioneel Witgoedtransport",
     description: "Word ZZP-partner bij 013Transport. Wekelijkse opdrachten, eerlijke betaling en tot 10% bonus.",
+    images: ["/013Transport.webp"],
   },
   robots: {
     index: true,
