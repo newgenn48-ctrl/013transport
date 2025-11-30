@@ -48,6 +48,7 @@ export async function POST(request: NextRequest) {
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
           <div style="background-color: #6d4233; padding: 30px; text-align: center;">
+            <img src="https://013transport.eu/icon.svg" alt="013Transport Logo" style="width: 60px; height: 60px; margin-bottom: 15px;">
             <h1 style="color: white; margin: 0;">013Transport</h1>
           </div>
           <div style="padding: 30px; background-color: #f9f9f9;">

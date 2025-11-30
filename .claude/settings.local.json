@@ -8,7 +8,12 @@
       "Bash(move \"030Transport (2).webp\" \"030Transport-2.webp\")",
       "Bash(npm install:*)",
       "Bash(git remote add:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\n013Transport website complete\n\n- Homepage, Vacatures, Diensten, Over Ons, Contact pagina''s\n- SEO: sitemap, robots.txt, structured data, meta tags\n- Contactformulier met SMTP email verzending\n- WhatsApp integratie\n- Google Ads tracking\n- Responsive design met TailwindCSS\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git branch:*)",
+      "Bash(git push:*)",
+      "Bash(git pull:*)",
+      "Bash(git commit:*)"
     ],
     "deny": [],
     "ask": []
