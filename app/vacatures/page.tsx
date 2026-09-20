@@ -1,10 +1,10 @@
 import Image from 'next/image';
 import { Metadata } from 'next';
-import { JobPostingSchema, BreadcrumbSchema } from '@/components/StructuredData';
+import { JobPostingSchema, BreadcrumbSchema, FAQSchema } from '@/components/StructuredData';
 
 export const metadata: Metadata = {
   title: "Vacatures - Word Bezorgpartner",
-  description: "Bekijk onze vacatures voor ZZP chauffeurs. 1M en 2M witgoedbezorging met verdiensten tot €53 per stop. Standplaatsen: Breda, Raamsdonksveer.",
+  description: "Vacatures voor ZZP chauffeurs: 1M, 2M en Dynalogic witgoedbezorging. Verdien tot €53 per stop of €57 per uur, plus 10% bonus. Standplaatsen Breda en Raamsdonksveer.",
   keywords: [
     "chauffeur vacature",
     "ZZP chauffeur gezocht",
@@ -25,6 +25,50 @@ export const metadata: Metadata = {
   },
 };
 
+// Datums bewust vast in plaats van new Date(): Google for Jobs wantrouwt
+// vacatures die bij elke crawl opnieuw als "vandaag geplaatst" binnenkomen.
+// Bump deze zodra een vacature echt wijzigt of verlengd wordt.
+const VACATURE_GEPLAATST = '2026-09-20';
+const VACATURE_GELDIG_TOT = '2026-12-31';
+
+const faqs = [
+  {
+    question: 'Welke eisen stelt 013Transport aan ZZP-chauffeurs?',
+    answer:
+      'Je hebt een VOG, spreekt vloeiend Nederlands en beschikt over een eigen bakwagen zonder reclame en zonder schade. Een laadklep is verplicht en het voertuig heeft minimaal een Euro 6-classificatie. Daarnaast heb je een geldige NIWO-vergunning nodig.',
+  },
+  {
+    question: 'Wat verdien ik als bezorgpartner bij 013Transport?',
+    answer:
+      'Bij 1-mans witgoedbezorging verdien je €16 per klantlevering en €53 per winkellevering. Bij 2-mans full service is dat €24 voor een drempellevering, €34 voor normale full service en €39 voor een Amerikaanse koelkast. Als Dynalogic-partner rijd je op uurbasis voor €57 per uur. Op zaterdag komt er €5 per stop bij. Alle bedragen zijn exclusief BTW.',
+  },
+  {
+    question: 'Vanuit welke depots kan ik rijden?',
+    answer:
+      'Je rijdt vanuit ons hoofddepot in Breda of vanuit het regionale depot in Raamsdonksveer. Bij de kennismaking kijken we samen welk depot het beste bij jouw regio past.',
+  },
+  {
+    question: 'Wanneer word ik uitbetaald?',
+    answer: 'Je facturen worden binnen 30 dagen na indiening betaald.',
+  },
+  {
+    question: 'Hoe werkt de bonusregeling van 10%?',
+    answer:
+      'De bonus hangt af van je klantbeoordeling (NPS). Bij een score van 9 uit 10 ontvang je 5% bonus, bij 9,5 uit 10 is dat 7% en bij een perfecte 10 uit 10 loopt de bonus op tot 10%.',
+  },
+  {
+    question: 'Hoeveel dagen per week kan ik werken?',
+    answer:
+      'Je ontvangt wekelijks opdrachten en bepaalt zelf wanneer je rijdt. Als Dynalogic-partner is er werk op 6 dagen per week beschikbaar.',
+  },
+  {
+    question: 'Hoe meld ik me aan als bezorgpartner?',
+    answer:
+      'Stuur een WhatsApp-bericht naar 06 86 41 1124 of bel ons. We plannen daarna een kennismakingsgesprek bij het depot in jouw regio.',
+  },
+];
+
+
 export default function Vacatures() {
   return (
     <>
@@ -36,17 +80,24 @@ export default function Vacatures() {
         title="Chauffeur 1M Witgoed"
         description="Solo witgoedbezorging voor ervaren chauffeurs. Verdien €16 per klantlevering en €53 per winkellevering. Flexibele werktijden vanuit depots in Breda en Raamsdonksveer."
         salary="16-53"
+        datePosted={VACATURE_GEPLAATST}
+        validThrough={VACATURE_GELDIG_TOT}
       />
       <JobPostingSchema
         title="Chauffeur 2M Full Service"
         description="Chauffeur + bijrijder team voor witgoedbezorging. Verdien €24-€39 per stop afhankelijk van servicetype. Full service inclusief installatie."
         salary="24-39"
+        datePosted={VACATURE_GEPLAATST}
+        validThrough={VACATURE_GELDIG_TOT}
       />
       <JobPostingSchema
         title="Dynalogic Partner - Witgoed & Bruingoed"
         description="Bezorging van witgoed en bruingoed. Verdien €57 per uur met tot 10% bonus. 6 dagen per week werk, betaling binnen 30 dagen."
         salary="57"
+        datePosted={VACATURE_GEPLAATST}
+        validThrough={VACATURE_GELDIG_TOT}
       />
+      <FAQSchema faqs={faqs} />
       {/* Header */}
       <section className="pt-36 pb-24 relative overflow-hidden" style={{ backgroundColor: '#6d4233' }}>
         <div className="absolute inset-0 z-0">
@@ -54,7 +105,9 @@ export default function Vacatures() {
             src="/030Transport.webp"
             alt="013Transport vloot bezorgwagens - word ZZP chauffeur voor witgoedbezorging"
             fill
+            sizes="100vw"
             className="object-cover opacity-20"
+            priority
           />
         </div>
         <div className="absolute top-0 left-1/4 w-96 h-96 rounded-full blur-3xl" style={{ backgroundColor: 'rgba(249, 139, 103, 0.2)' }}></div>
@@ -384,6 +437,25 @@ export default function Vacatures() {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
                 <p className="text-white/70">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Veelgestelde vragen</h2>
+            <p className="text-gray-600">De vragen die chauffeurs ons het vaakst stellen</p>
+          </div>
+
+          <div className="space-y-4">
+            {faqs.map((faq, i) => (
+              <div key={i} className="p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <h3 className="text-lg font-bold text-gray-900 mb-2">{faq.question}</h3>
+                <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
               </div>
             ))}
           </div>

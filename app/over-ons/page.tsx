@@ -4,7 +4,7 @@ import { Metadata } from 'next';
 import { BreadcrumbSchema } from '@/components/StructuredData';
 
 export const metadata: Metadata = {
-  title: "Over Ons",
+  title: "Over Ons - Witgoedtransport sinds 2019",
   description: "Leer meer over 013Transport BV. Al meer dan 5 jaar specialist in witgoedtransport met depots in Breda en Raamsdonksveer. KvK: 88112969.",
   keywords: [
     "013Transport",
@@ -38,7 +38,9 @@ export default function OverOns() {
             src="/030Transport.webp"
             alt="013Transport BV - al meer dan 5 jaar specialist in witgoedtransport Nederland"
             fill
+            sizes="100vw"
             className="object-cover opacity-20"
+            priority
           />
         </div>
         <div className="absolute top-0 left-1/4 w-96 h-96 rounded-full blur-3xl" style={{ backgroundColor: 'rgba(249, 139, 103, 0.2)' }}></div>
@@ -95,6 +97,7 @@ export default function OverOns() {
                   src="/030Transport.webp"
                   alt="013Transport bezorgwagens vloot - professioneel witgoedtransport team"
                   fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover"
                 />
               </div>

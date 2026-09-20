@@ -4,7 +4,7 @@ import { Metadata } from 'next';
 import { BreadcrumbSchema } from '@/components/StructuredData';
 
 export const metadata: Metadata = {
-  title: "Onze Diensten",
+  title: "Transportdiensten voor ZZP-chauffeurs",
   description: "Ontdek onze transportdiensten: 1-mans transport, 2-mans team, Dynalogic partner en installatie service. Professionele witgoedbezorging door heel Nederland.",
   keywords: [
     "witgoedtransport diensten",
@@ -39,7 +39,9 @@ export default function Diensten() {
             src="/030Transport.webp"
             alt="013Transport professionele witgoedtransport diensten - 1-mans en 2-mans bezorging"
             fill
+            sizes="100vw"
             className="object-cover opacity-20"
+            priority
           />
         </div>
         <div className="absolute top-0 left-1/4 w-96 h-96 rounded-full blur-3xl" style={{ backgroundColor: 'rgba(249, 139, 103, 0.2)' }}></div>
@@ -74,6 +76,12 @@ export default function Diensten() {
       {/* Services */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Wat wij bezorgen</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Vier diensten die je als ZZP-partner kunt uitvoeren, van solo witgoedbezorging tot installatie bij de klant thuis.
+            </p>
+          </div>
           <div className="grid lg:grid-cols-2 gap-8">
             {[
               {

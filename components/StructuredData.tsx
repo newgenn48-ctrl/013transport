@@ -2,10 +2,11 @@ export function OrganizationSchema() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": "https://013transport.eu/#organization",
     "name": "013Transport BV",
     "alternateName": "013Transport",
     "url": "https://013transport.eu",
-    "logo": "https://013transport.eu/icon.svg",
+    "logo": "https://013transport.eu/logo.svg",
     "description": "Professioneel witgoedtransport door heel Nederland. Wij werken met ervaren ZZP-partners vanuit depots in Breda en Raamsdonksveer.",
     "foundingDate": "2019",
     "address": {
@@ -25,6 +26,11 @@ export function OrganizationSchema() {
       "name": "Netherlands"
     },
     "taxID": "NL864507070B01",
+    "identifier": {
+      "@type": "PropertyValue",
+      "propertyID": "KvK",
+      "value": "88112969"
+    },
     "legalName": "013Transport BV"
   };
 
@@ -40,6 +46,8 @@ export function LocalBusinessSchema() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
+    "@id": "https://013transport.eu/#localbusiness",
+    "parentOrganization": { "@id": "https://013transport.eu/#organization" },
     "name": "013Transport BV",
     "image": "https://013transport.eu/030Transport.webp",
     "url": "https://013transport.eu",
@@ -77,11 +85,15 @@ export function JobPostingSchema({
   title,
   description,
   salary,
+  datePosted,
+  validThrough,
   employmentType = "CONTRACTOR"
 }: {
   title: string;
   description: string;
   salary: string;
+  datePosted: string;
+  validThrough: string;
   employmentType?: string;
 }) {
   const schema = {
@@ -89,15 +101,17 @@ export function JobPostingSchema({
     "@type": "JobPosting",
     "title": title,
     "description": description,
-    "datePosted": new Date().toISOString().split('T')[0],
-    "validThrough": new Date(Date.now() + 90 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
+    "datePosted": datePosted,
+    "validThrough": validThrough,
     "employmentType": employmentType,
     "hiringOrganization": {
+      "@id": "https://013transport.eu/#organization",
       "@type": "Organization",
       "name": "013Transport BV",
       "sameAs": "https://013transport.eu",
-      "logo": "https://013transport.eu/icon.svg"
+      "logo": "https://013transport.eu/logo.svg"
     },
+    "directApply": true,
     "jobLocation": [
       {
         "@type": "Place",

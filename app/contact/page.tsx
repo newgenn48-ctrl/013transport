@@ -4,7 +4,7 @@ import ContactForm from '@/components/ContactForm';
 import { BreadcrumbSchema } from '@/components/StructuredData';
 
 export const metadata: Metadata = {
-  title: "Contact",
+  title: "Contact - Depots Breda en Raamsdonksveer",
   description: "Neem contact op met 013Transport. Bel 06 86 41 1124, WhatsApp of mail ons. Depots in Breda en Raamsdonksveer. KvK: 88112969.",
   keywords: [
     "013Transport contact",
@@ -37,7 +37,9 @@ export default function Contact() {
             src="/030Transport.webp"
             alt="013Transport bestelwagens voor witgoedbezorging"
             fill
+            sizes="100vw"
             className="object-cover opacity-20"
+            priority
           />
         </div>
         <div className="absolute top-0 left-1/4 w-96 h-96 rounded-full blur-3xl" style={{ backgroundColor: 'rgba(249, 139, 103, 0.2)' }}></div>

@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Word Witgoed Bezorger | ZZP Chauffeur Vacatures",
+  title: "Witgoed Bezorger | ZZP Chauffeur Vacatures | 013Transport",
   description: "Word ZZP-partner bij 013Transport. Verdien tot €57/uur en 10% bonus. Witgoedbezorging vanuit Breda en Raamsdonksveer. Flexibele werktijden, wekelijkse opdrachten.",
   keywords: [
     "witgoedtransport",
@@ -40,6 +40,7 @@ export default function Home() {
             src="/030Transport.webp"
             alt="013Transport witgoed bezorgwagens - professioneel witgoedtransport door heel Nederland"
             fill
+            sizes="100vw"
             className="object-cover opacity-20"
             priority
           />
