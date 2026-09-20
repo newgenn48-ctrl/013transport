@@ -6,7 +6,7 @@ export function OrganizationSchema() {
     "alternateName": "013Transport",
     "url": "https://013transport.eu",
     "logo": "https://013transport.eu/icon.svg",
-    "description": "Professioneel witgoedtransport door heel Nederland. Wij werken met ervaren ZZP-partners vanuit depots in Breda, Nieuwegein en Hazeldonk.",
+    "description": "Professioneel witgoedtransport door heel Nederland. Wij werken met ervaren ZZP-partners vanuit depots in Breda en Raamsdonksveer.",
     "foundingDate": "2019",
     "address": {
       "@type": "PostalAddress",
@@ -111,15 +111,7 @@ export function JobPostingSchema({
         "@type": "Place",
         "address": {
           "@type": "PostalAddress",
-          "addressLocality": "Nieuwegein",
-          "addressCountry": "NL"
-        }
-      },
-      {
-        "@type": "Place",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Hazeldonk",
+          "addressLocality": "Raamsdonksveer",
           "addressCountry": "NL"
         }
       }

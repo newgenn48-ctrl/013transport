@@ -4,7 +4,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: "Word Witgoed Bezorger | ZZP Chauffeur Vacatures",
-  description: "Word ZZP-partner bij 013Transport. Verdien tot €54/uur en 10% bonus. Witgoedbezorging vanuit Breda, Nieuwegein en Hazeldonk. Flexibele werktijden, wekelijkse opdrachten.",
+  description: "Word ZZP-partner bij 013Transport. Verdien tot €57/uur en 10% bonus. Witgoedbezorging vanuit Breda en Raamsdonksveer. Flexibele werktijden, wekelijkse opdrachten.",
   keywords: [
     "witgoedtransport",
     "ZZP chauffeur",
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     "bezorgpartner",
     "witgoed bezorging",
     "chauffeur vacature Breda",
-    "chauffeur vacature Nieuwegein",
+    "chauffeur vacature Raamsdonksveer",
     "transport werk",
     "bakwagen chauffeur",
     "witgoed chauffeur",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "Word Witgoed Bezorger | 013Transport",
-    description: "Verdien tot €54/uur en 10% bonus als ZZP-chauffeur. Flexibele werktijden vanuit 3 depots.",
+    description: "Verdien tot €57/uur en 10% bonus als ZZP-chauffeur. Flexibele werktijden vanuit 2 depots.",
     url: "https://013transport.eu",
   },
   alternates: {
@@ -151,8 +151,8 @@ export default function Home() {
                   </svg>
                 ),
                 title: 'Dynalogic Partner',
-                desc: 'Witgoed & bruingoed bezorgen. €54/uur.',
-                tag: '€54/uur',
+                desc: 'Witgoed & bruingoed bezorgen. €57/uur.',
+                tag: '€57/uur',
               },
               {
                 icon: (
@@ -340,15 +340,14 @@ export default function Home() {
               Onze Depots
             </h2>
             <p className="text-lg text-gray-600">
-              3 strategische locaties door Nederland
+              2 strategische locaties door Nederland
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 gap-6">
             {[
               { name: 'Breda', type: 'Hoofddepot', region: 'Zuid-Nederland' },
-              { name: 'Nieuwegein', type: 'Regionaal Depot', region: 'Midden-Nederland' },
-              { name: 'Hazeldonk', type: 'Logistiek Hub', region: 'NL-BE Grens' },
+              { name: 'Raamsdonksveer', type: 'Regionaal Depot', region: 'Noord-Brabant' },
             ].map((depot, i) => (
               <div
                 key={i}

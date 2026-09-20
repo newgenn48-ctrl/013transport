@@ -5,7 +5,7 @@ import { BreadcrumbSchema } from '@/components/StructuredData';
 
 export const metadata: Metadata = {
   title: "Over Ons",
-  description: "Leer meer over 013Transport BV. Al meer dan 5 jaar specialist in witgoedtransport met depots in Breda, Nieuwegein en Hazeldonk. KvK: 88112969.",
+  description: "Leer meer over 013Transport BV. Al meer dan 5 jaar specialist in witgoedtransport met depots in Breda en Raamsdonksveer. KvK: 88112969.",
   keywords: [
     "013Transport",
     "witgoedtransport bedrijf",
@@ -100,7 +100,7 @@ export default function OverOns() {
               </div>
               <div className="grid grid-cols-3 gap-4">
                 {[
-                  { value: '3', label: 'Depots' },
+                  { value: '2', label: 'Depots' },
                   { value: '10%', label: 'Bonus', highlight: true },
                   { value: '5+', label: 'Jaar ervaring' },
                 ].map((stat, i) => (

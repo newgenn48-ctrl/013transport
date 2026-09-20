@@ -106,8 +106,8 @@ export default function Diensten() {
                 ),
                 title: 'Dynalogic Partner',
                 desc: 'Bezorging van witgoed en bruingoed bij klanten. Je rijdt in een witte bakwagen (21m³) zonder reclame.',
-                features: ['€54 per uur', '6 dagen per week', 'Tot 10% bonus', 'Laden/lossen apart vergoed'],
-                tag: '€54/uur',
+                features: ['€57 per uur', '6 dagen per week', 'Tot 10% bonus', 'Laden/lossen apart vergoed'],
+                tag: '€57/uur',
               },
               {
                 icon: (
@@ -168,9 +168,9 @@ export default function Diensten() {
       <section className="py-16 text-white" style={{ backgroundColor: '#6d4233' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">Werkgebieden</h2>
-          <p className="text-white/70 mb-8">Wij leveren door heel Nederland vanuit drie strategische depots</p>
+          <p className="text-white/70 mb-8">Wij leveren door heel Nederland vanuit twee strategische depots</p>
           <div className="flex flex-wrap justify-center gap-4">
-            {['Breda', 'Nieuwegein', 'Hazeldonk'].map((depot) => (
+            {['Breda', 'Raamsdonksveer'].map((depot) => (
               <span key={depot} className="px-6 py-3 bg-white/10 rounded-full font-medium">
                 {depot}
               </span>

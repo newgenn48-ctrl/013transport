@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     default: "013Transport | Professioneel Witgoedtransport",
     template: "%s | 013Transport"
   },
-  description: "Word ZZP-partner bij 013Transport. Wekelijkse opdrachten, eerlijke betaling en tot 10% bonus. Depots in Breda, Nieuwegein en Hazeldonk.",
+  description: "Word ZZP-partner bij 013Transport. Wekelijkse opdrachten, eerlijke betaling en tot 10% bonus. Depots in Breda en Raamsdonksveer.",
   keywords: ["witgoedtransport", "ZZP chauffeur", "transport vacature", "013Transport", "bezorgpartner", "witgoed bezorging"],
   authors: [{ name: "013Transport BV" }],
   creator: "013Transport BV",

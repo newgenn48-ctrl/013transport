@@ -4,13 +4,13 @@ import { JobPostingSchema, BreadcrumbSchema } from '@/components/StructuredData'
 
 export const metadata: Metadata = {
   title: "Vacatures - Word Bezorgpartner",
-  description: "Bekijk onze vacatures voor ZZP chauffeurs. 1M en 2M witgoedbezorging met verdiensten tot €53 per stop. Standplaatsen: Breda, Nieuwegein, Hazeldonk.",
+  description: "Bekijk onze vacatures voor ZZP chauffeurs. 1M en 2M witgoedbezorging met verdiensten tot €53 per stop. Standplaatsen: Breda, Raamsdonksveer.",
   keywords: [
     "chauffeur vacature",
     "ZZP chauffeur gezocht",
     "witgoed bezorger vacature",
     "transport vacature Breda",
-    "transport vacature Nieuwegein",
+    "transport vacature Raamsdonksveer",
     "bakwagen chauffeur gezocht",
     "bezorgpartner worden",
     "2-mans bezorging vacature",
@@ -34,7 +34,7 @@ export default function Vacatures() {
       ]} />
       <JobPostingSchema
         title="Chauffeur 1M Witgoed"
-        description="Solo witgoedbezorging voor ervaren chauffeurs. Verdien €16 per klantlevering en €53 per winkellevering. Flexibele werktijden vanuit depots in Breda, Nieuwegein en Hazeldonk."
+        description="Solo witgoedbezorging voor ervaren chauffeurs. Verdien €16 per klantlevering en €53 per winkellevering. Flexibele werktijden vanuit depots in Breda en Raamsdonksveer."
         salary="16-53"
       />
       <JobPostingSchema
@@ -44,8 +44,8 @@ export default function Vacatures() {
       />
       <JobPostingSchema
         title="Dynalogic Partner - Witgoed & Bruingoed"
-        description="Bezorging van witgoed en bruingoed. Verdien €54 per uur met tot 10% bonus. 6 dagen per week werk, betaling binnen 30 dagen."
-        salary="54"
+        description="Bezorging van witgoed en bruingoed. Verdien €57 per uur met tot 10% bonus. 6 dagen per week werk, betaling binnen 30 dagen."
+        salary="57"
       />
       {/* Header */}
       <section className="pt-36 pb-24 relative overflow-hidden" style={{ backgroundColor: '#6d4233' }}>
@@ -92,7 +92,7 @@ export default function Vacatures() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex flex-wrap items-center gap-4">
             <span className="text-gray-500 font-medium">Standplaatsen:</span>
-            {['Breda', 'Nieuwegein', 'Hazeldonk'].map((loc) => (
+            {['Breda', 'Raamsdonksveer'].map((loc) => (
               <span key={loc} className="px-4 py-2 bg-gray-100 rounded-full text-gray-700 font-medium">
                 {loc}
               </span>
@@ -264,7 +264,7 @@ export default function Vacatures() {
                 <div className="space-y-3">
                   <div className="flex justify-between items-center">
                     <span className="text-gray-600">Uurloon</span>
-                    <span className="font-bold text-lg" style={{ color: '#166534' }}>€54,-</span>
+                    <span className="font-bold text-lg" style={{ color: '#166534' }}>€57,-</span>
                   </div>
                   <div className="flex justify-between items-center text-sm">
                     <span className="text-gray-500">Laden/lossen apart vergoed</span>

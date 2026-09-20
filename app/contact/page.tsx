@@ -5,12 +5,12 @@ import { BreadcrumbSchema } from '@/components/StructuredData';
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Neem contact op met 013Transport. Bel 06 86 41 1124, WhatsApp of mail ons. Depots in Breda, Nieuwegein en Hazeldonk. KvK: 88112969.",
+  description: "Neem contact op met 013Transport. Bel 06 86 41 1124, WhatsApp of mail ons. Depots in Breda en Raamsdonksveer. KvK: 88112969.",
   keywords: [
     "013Transport contact",
     "witgoedtransport contact",
     "transport Breda",
-    "transport Nieuwegein",
+    "transport Raamsdonksveer",
     "bezorgpartner worden",
   ],
   openGraph: {
@@ -145,11 +145,10 @@ export default function Contact() {
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Onze Depots</h2>
           </div>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 gap-6">
             {[
               { name: 'Breda', type: 'Hoofddepot', region: 'Zuid-Nederland' },
-              { name: 'Nieuwegein', type: 'Regionaal Depot', region: 'Midden-Nederland' },
-              { name: 'Hazeldonk', type: 'Logistiek Hub', region: 'NL-BE Grens' },
+              { name: 'Raamsdonksveer', type: 'Regionaal Depot', region: 'Noord-Brabant' },
             ].map((depot, i) => (
               <div
                 key={i}
